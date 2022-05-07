@@ -14,6 +14,7 @@
 		01D95C3A2825E56A000E51E4 /* MyFoodTruck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01D95C382825E56A000E51E4 /* MyFoodTruck.xcdatamodeld */; };
 		01D95C3C2825E56C000E51E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D95C3B2825E56C000E51E4 /* Assets.xcassets */; };
 		01D95C3F2825E56C000E51E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D95C3D2825E56C000E51E4 /* LaunchScreen.storyboard */; };
+		01D95C4A2825E5A8000E51E4 /* Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D95C492825E5A8000E51E4 /* Param.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		01D95C3B2825E56C000E51E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01D95C3E2825E56C000E51E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01D95C402825E56C000E51E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D95C492825E5A8000E51E4 /* Param.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		01D95C2E2825E56A000E51E4 /* MyFoodTruck */ = {
 			isa = PBXGroup;
 			children = (
+				01D95C482825E58F000E51E4 /* Model */,
+				01D95C472825E587000E51E4 /* View */,
+				01D95C462825E57A000E51E4 /* ViewController */,
 				01D95C2F2825E56A000E51E4 /* AppDelegate.swift */,
 				01D95C312825E56A000E51E4 /* SceneDelegate.swift */,
-				01D95C332825E56A000E51E4 /* ViewController.swift */,
-				01D95C352825E56A000E51E4 /* Main.storyboard */,
 				01D95C3B2825E56C000E51E4 /* Assets.xcassets */,
 				01D95C3D2825E56C000E51E4 /* LaunchScreen.storyboard */,
 				01D95C402825E56C000E51E4 /* Info.plist */,
 				01D95C382825E56A000E51E4 /* MyFoodTruck.xcdatamodeld */,
 			);
 			path = MyFoodTruck;
+			sourceTree = "<group>";
+		};
+		01D95C462825E57A000E51E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01D95C332825E56A000E51E4 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		01D95C472825E587000E51E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01D95C352825E56A000E51E4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01D95C482825E58F000E51E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01D95C492825E5A8000E51E4 /* Param.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01D95C342825E56A000E51E4 /* ViewController.swift in Sources */,
+				01D95C4A2825E5A8000E51E4 /* Param.swift in Sources */,
 				01D95C302825E56A000E51E4 /* AppDelegate.swift in Sources */,
 				01D95C322825E56A000E51E4 /* SceneDelegate.swift in Sources */,
 				01D95C3A2825E56A000E51E4 /* MyFoodTruck.xcdatamodeld in Sources */,
