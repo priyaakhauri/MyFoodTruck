@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v8C-Qy-c0c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v8C-Qy-c0c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,14 +39,8 @@
                                 <rect key="frame" x="145" y="461" width="121" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
                                 <connections>
+                                    <action selector="onSignInClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLg-E2-bWg"/>
                                     <segue destination="ot5-If-4DH" kind="show" id="hvw-Rd-hMg"/>
                                 </connections>
                             </button>
@@ -55,13 +48,6 @@
                                 <rect key="frame" x="58" y="635" width="299" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create a new account">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="Evs-jI-m04" kind="show" id="uuC-Kn-fsj"/>
                                 </connections>
@@ -78,15 +64,19 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wge-g0-F47"/>
+                    <connections>
+                        <outlet property="txtEmailId" destination="DFn-T6-zhc" id="JTD-ug-GBi"/>
+                        <outlet property="txtPassword" destination="NG5-eO-TRz" id="Lcf-Fk-ah7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="N2k-Uh-UgB">
             <objects>
-                <viewController id="Evs-jI-m04" sceneMemberID="viewController">
+                <viewController id="Evs-jI-m04" customClass="RegisterViewController" customModule="MyFoodTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EOn-tL-1Qf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,19 +116,21 @@
                                 <rect key="frame" x="128" y="612" width="148" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Register">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSignUpClick:" destination="Evs-jI-m04" eventType="touchUpInside" id="tvA-vX-l9t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Whu-tB-E2K"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="QgI-D9-qwr"/>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="yqP-Nr-bU8" id="U72-jf-3qW"/>
+                        <outlet property="txtEmail" destination="0Hy-ok-EN8" id="hPD-PC-YbM"/>
+                        <outlet property="txtName" destination="CJL-99-Pg6" id="gy0-MD-GI8"/>
+                        <outlet property="txtPassword" destination="zsr-xn-FDj" id="bKN-5Q-HJo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNq-ZJ-9B7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,7 +209,6 @@
                                 <rect key="frame" x="27" y="181" width="141" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Dashboard"/>
                                 <connections>
                                     <segue destination="wJN-AG-VbW" kind="show" id="Ea7-Qi-He1"/>
                                 </connections>
@@ -226,7 +217,6 @@
                                 <rect key="frame" x="17" y="239" width="151" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Checkout"/>
                                 <connections>
                                     <segue destination="zEb-N8-hs6" kind="show" id="3yA-F3-dgi"/>
                                 </connections>
@@ -235,7 +225,6 @@
                                 <rect key="frame" x="25" y="305" width="143" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Payment"/>
                                 <connections>
                                     <segue destination="hXO-q2-pQV" kind="show" id="9Ux-kZ-nn1"/>
                                 </connections>
@@ -244,7 +233,6 @@
                                 <rect key="frame" x="20" y="369" width="148" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Profile"/>
                                 <connections>
                                     <segue destination="qEf-wn-B0n" kind="show" id="A6z-hO-oPR"/>
                                 </connections>
@@ -309,14 +297,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
