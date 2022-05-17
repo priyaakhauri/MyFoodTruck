@@ -9,8 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var txtEmailId: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,16 +21,22 @@ class ViewController: UIViewController {
    
 
     @IBAction func onSignInClick(_ sender: Any) {
-        if(txtEmailId.text != "" && txtPassword.text != ""){
-            let user = Utility().getUser(emailId: txtEmailId.text!);
-            if(user.emailId == txtEmailId.text && user.password == txtPassword.text){
-                // Navigate to menu
-                print("Authenticated");
-            }else{
-                print("Failed");
+            if(txtEmailId.text != "" && txtPassword.text != ""){
+                let user = Utility().getUser(emailId: txtEmailId.text!);
+                if(user.emailId == txtEmailId.text && user.password == txtPassword.text){
+                    // Navigate to menu
+                    print("Authenticated");
+        //                let story = UIStoryboard(name: "Main", bundle: nil);
+        //                let homeViewController = story.instantiateViewController(identifier: "HomeViewController") as! HomeViewController;
+        //                self.present(homeViewController, animated: true, completion: nil);
+                }else{
+                    print("Failed");
+                }
             }
-        }
     }
+    
+    
+
     
 }
 
