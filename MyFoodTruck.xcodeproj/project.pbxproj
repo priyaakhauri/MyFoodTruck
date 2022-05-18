@@ -7,35 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2993B4C7282F55630048864A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993B4C6282F55630048864A /* Utility.swift */; };
-		2993B4CA282F55A10048864A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993B4C9282F55A10048864A /* RegisterViewController.swift */; };
-		2993B4CD282F5A340048864A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993B4CC282F5A340048864A /* User.swift */; };
-		29DC3F3A283332A8000E3902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DC3F38283332A8000E3902 /* Main.storyboard */; };
 		793ECBFC282AA70900FD7174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793ECBFB282AA70900FD7174 /* AppDelegate.swift */; };
 		793ECBFE282AA70900FD7174 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793ECBFD282AA70900FD7174 /* SceneDelegate.swift */; };
 		793ECC00282AA70900FD7174 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793ECBFF282AA70900FD7174 /* ViewController.swift */; };
+		793ECC03282AA70900FD7174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793ECC01282AA70900FD7174 /* Main.storyboard */; };
 		793ECC06282AA70900FD7174 /* MyFoodTruck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 793ECC04282AA70900FD7174 /* MyFoodTruck.xcdatamodeld */; };
 		793ECC08282AA71000FD7174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793ECC07282AA71000FD7174 /* Assets.xcassets */; };
 		793ECC0B282AA71000FD7174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793ECC09282AA71000FD7174 /* LaunchScreen.storyboard */; };
 		793ECC16282AA75000FD7174 /* Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793ECC15282AA75000FD7174 /* Param.swift */; };
-		CDC4533F282B78330045306C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC4533E282B78330045306C /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2993B4C6282F55630048864A /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		2993B4C9282F55A10048864A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		2993B4CC282F5A340048864A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		29DC3F39283332A8000E3902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../../../../Downloads/Archive/MyFoodTruck/View/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		793ECBF8282AA70900FD7174 /* MyFoodTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFoodTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		793ECBFB282AA70900FD7174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793ECBFD282AA70900FD7174 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		793ECBFF282AA70900FD7174 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		793ECC02282AA70900FD7174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		793ECC05282AA70900FD7174 /* MyFoodTruck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyFoodTruck.xcdatamodel; sourceTree = "<group>"; };
 		793ECC07282AA71000FD7174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		793ECC0A282AA71000FD7174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		793ECC0C282AA71000FD7174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793ECC15282AA75000FD7174 /* Param.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param.swift; sourceTree = "<group>"; };
-		CDC4533E282B78330045306C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				793ECBFF282AA70900FD7174 /* ViewController.swift */,
-				CDC4533E282B78330045306C /* HomeViewController.swift */,
-				2993B4C9282F55A10048864A /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,8 +84,6 @@
 			children = (
 				793ECC04282AA70900FD7174 /* MyFoodTruck.xcdatamodeld */,
 				793ECC15282AA75000FD7174 /* Param.swift */,
-				2993B4C6282F55630048864A /* Utility.swift */,
-				2993B4CC282F5A340048864A /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,7 +91,7 @@
 		793ECC1A282AA76000FD7174 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				29DC3F38283332A8000E3902 /* Main.storyboard */,
+				793ECC01282AA70900FD7174 /* Main.storyboard */,
 				793ECC09282AA71000FD7174 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -168,7 +156,7 @@
 			files = (
 				793ECC0B282AA71000FD7174 /* LaunchScreen.storyboard in Resources */,
 				793ECC08282AA71000FD7174 /* Assets.xcassets in Resources */,
-				29DC3F3A283332A8000E3902 /* Main.storyboard in Resources */,
+				793ECC03282AA70900FD7174 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,25 +167,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2993B4C7282F55630048864A /* Utility.swift in Sources */,
 				793ECC00282AA70900FD7174 /* ViewController.swift in Sources */,
 				793ECC16282AA75000FD7174 /* Param.swift in Sources */,
-				2993B4CA282F55A10048864A /* RegisterViewController.swift in Sources */,
 				793ECBFC282AA70900FD7174 /* AppDelegate.swift in Sources */,
-				2993B4CD282F5A340048864A /* User.swift in Sources */,
 				793ECBFE282AA70900FD7174 /* SceneDelegate.swift in Sources */,
 				793ECC06282AA70900FD7174 /* MyFoodTruck.xcdatamodeld in Sources */,
-				CDC4533F282B78330045306C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		29DC3F38283332A8000E3902 /* Main.storyboard */ = {
+		793ECC01282AA70900FD7174 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				29DC3F39283332A8000E3902 /* Base */,
+				793ECC02282AA70900FD7174 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
