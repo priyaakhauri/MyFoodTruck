@@ -63,7 +63,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6A-BY-LAe">
                                                 <rect key="frame" x="110.5" y="0.0" width="110" height="82"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.50588235290000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.99215686274509807" green="0.27450980392156865" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,7 +89,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2Z-2n-Xhn">
                                         <rect key="frame" x="0.0" y="582.5" width="331" height="82"/>
-                                        <color key="backgroundColor" red="0.99215686274509807" green="0.50588235294117645" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.99215686274509807" green="0.27450980392156865" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <state key="normal" title="Create a new account">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,14 +153,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9c-xi-RaH">
-                                        <rect key="frame" x="0.0" y="0.0" width="25.5" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="89.5"/>
                                         <state key="normal" image="blueAroow"/>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="VHO-OP-bfd"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zag-Ms-rLu">
-                                        <rect key="frame" x="25.5" y="0.0" width="388.5" height="89.5"/>
+                                        <rect key="frame" x="24" y="0.0" width="390" height="89.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" red="0.20784313730000001" green="0.46274509800000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -221,7 +221,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZO-1t-9rr">
                                                 <rect key="frame" x="110.5" y="0.0" width="110" height="56"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.50588235290000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.99215686274509807" green="0.27450980392156865" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -800,7 +800,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfq-L5-8Qw">
                                 <rect key="frame" x="103.5" y="761" width="207" height="44.5"/>
-                                <color key="backgroundColor" red="0.99215686274509807" green="0.50588235294117645" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.27450980392156865" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Checkout">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
