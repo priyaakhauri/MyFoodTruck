@@ -10,32 +10,37 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
-    @IBOutlet weak var leading: NSLayoutConstraint!
-    @IBOutlet weak var trailing: NSLayoutConstraint!
-    
+//
+//    @IBOutlet weak var leading: NSLayoutConstraint!
+//    @IBOutlet weak var trailing: NSLayoutConstraint!
+//
     var menuOut = false
+    
+    @IBOutlet weak var tvMenu: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
-    }
-
-    @IBAction func menuTapped(_ sender: Any) {
-            
-        if menuOut == false {
-            leading.constant = 250
-            trailing.constant = -250
-            menuOut = true
-        } else {
-            leading.constant = 0
-            trailing.constant = 0
-            menuOut = false
-            
-        }
-    
+        tvMenu.delegate = self;
+        tvMenu.dataSource = self;
     }
 }
+
+
+// Table view Delegate extension
+extension HomeViewController: UITableViewDelegate{}
+
+// Table view Data source extension
+extension HomeViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return Param.products.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        // assigning data to cells
+        let cell = tvMenu.dequeueReusableCell(withIdentifier: "productViewCell", for: indexPath) as! ProductViewCell
+        cell.setup(product: Param.products[indexPath.row]);
+        return cell;
+    }
+}
+
 

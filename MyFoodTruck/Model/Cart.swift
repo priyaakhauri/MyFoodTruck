@@ -11,11 +11,13 @@ import Foundation
 class Cart {
     
     func addToCart(product: Product){
-        var products: Array<Product>;
+        var products = Array<Product>();
         // Get Existing items in the list
         let cartSuite = UserDefaults(suiteName: "cart");
+        print("Searching suite");
         if let data = cartSuite?.object(forKey: "cartItems"){
             do {
+                print("Found suite");
                 // Create JSON Decoder
                 let decoder = JSONDecoder();
                 // Decode
@@ -23,21 +25,30 @@ class Cart {
                 // If list isnt empty search for added item
                 // else add in the list
                 if(products.count>0){
+                    print("products list have items");
                     let index = searchProduct(product: product, products: products);
                     if(index != -1){
+                        print("Found product");
                         products[index].qty+=1;
+                        print(products[index]);
                     }else{
+                        print("Adding new product");
+                        print(product);
                         products.append(product);
                     }
                 }else{
+                    print("Adding new product");
+                    print(product);
                     products.append(product);
                 }
-                
                 updateInUserDefault(products: products);
                 
             } catch {
                 print("Unable to Decode Note (\(error))")
             }
+        }else{
+            products.append(product);
+            updateInUserDefault(products: products);
         }
     }
     

@@ -12,4 +12,5 @@ struct Product: Codable{
     var name:String="";
     var price:Double=0.0;
     var qty:Int;
+    var imgSrc:String="";
 }
