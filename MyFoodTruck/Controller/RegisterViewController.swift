@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-class RegisterViewController: UIViewController{
+class RegisterViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtEmailId: UITextField!
@@ -19,6 +19,10 @@ class RegisterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        txtName.delegate = self;
+        txtEmailId.delegate = self;
+        txtPassword.delegate = self;
+        txtConfirmPassword.delegate = self;
     }
     
     @IBAction func onSignUpClick(_ sender: Any) {
@@ -31,6 +35,19 @@ class RegisterViewController: UIViewController{
          // Password Textbox should not be empty
          if(user.emailId == "" && txtEmailId.text != "" && txtName.text != "" && txtPassword.text != ""){
              utility.saveUser(name: txtName.text!, emailId: txtEmailId.text!, password: txtPassword.text!);
-         }
+            let story = UIStoryboard(name: "Main", bundle: nil);
+            let mainViewController = story.instantiateViewController(identifier: "mainViewController") as! ViewController;
+            self.present(mainViewController, animated: true, completion: nil);
+        }else{
+            print("Failed");
+        }
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        txtName.resignFirstResponder();
+        txtEmailId.resignFirstResponder();
+        txtPassword.resignFirstResponder();
+        txtConfirmPassword.resignFirstResponder();
     }
 }

@@ -41,6 +41,12 @@ extension HomeViewController: UITableViewDataSource{
         cell.setup(product: Param.products[indexPath.row]);
         return cell;
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let cellHeight = 0.12*screenSize.height;
+        return cellHeight;
+    }
 }
 
 

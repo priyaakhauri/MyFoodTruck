@@ -20,7 +20,7 @@ class Param {
     Product(id: 9, name: "Nachos", price: 6.50, qty: 0, imgSrc: "nachos"),
     Product(id: 10, name: "Sandwiches Piled", price: 7.95, qty: 0, imgSrc: "sandwichesPiled"),
     Product(id: 11, name: "Spaghetti Bolognese", price: 12.90, qty: 0, imgSrc: "SpaghettiBolognese"),
-    Product(id: 12, name: "Steak", price: 14, qty: 0, imgSrc: "steak"),
-    Product(id: 12, name: "Wrap", price: 9.90, qty: 0, imgSrc: "wrap"),
+    Product(id: 12, name: "Steak", price: 14, qty: 0, imgSrc: "Steak"),
+    Product(id: 13, name: "Wrap", price: 9.90, qty: 0, imgSrc: "wrap"),
     ]
 }

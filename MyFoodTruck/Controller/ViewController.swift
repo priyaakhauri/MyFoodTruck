@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtEmailId: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        txtPassword.delegate = self;
+        txtEmailId.delegate = self;
     }
    
     @IBAction func onSignInClick(_ sender: Any) {
@@ -37,6 +39,11 @@ class ViewController: UIViewController {
         let registerViewController = story.instantiateViewController(identifier: "registerViewController") as! RegisterViewController;
         self.present(registerViewController, animated: true, completion: nil);
       
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        txtPassword.resignFirstResponder();
+        txtEmailId.resignFirstResponder();
     }
 }
 
