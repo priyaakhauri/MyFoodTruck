@@ -16,12 +16,14 @@ class HomeViewController: UIViewController {
 //
     var menuOut = false
     
+    @IBOutlet weak var cartValueLabel: UILabel!
     @IBOutlet weak var tvMenu: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tvMenu.delegate = self;
         tvMenu.dataSource = self;
+    
     }
 }
 
