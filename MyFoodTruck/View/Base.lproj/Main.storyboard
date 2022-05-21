@@ -73,6 +73,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIk-NO-AVL"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMu-pF-diD">
                                                 <rect key="frame" x="220.5" y="0.0" width="110.5" height="82"/>
@@ -86,7 +89,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2Z-2n-Xhn">
                                         <rect key="frame" x="0.0" y="582.5" width="331" height="82"/>
-                                        <color key="backgroundColor" red="0.99215686270000003" green="0.50588235290000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.99215686274509807" green="0.50588235294117645" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <state key="normal" title="Create a new account">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,7 +166,7 @@
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.46274509800000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -280,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Order History View Controller-->
         <scene sceneID="sEU-TO-aCv">
             <objects>
-                <viewController id="3uy-Ve-Hcz" sceneMemberID="viewController">
+                <viewController id="3uy-Ve-Hcz" customClass="OrderHistoryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vcV-Ph-Z8g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -640,10 +643,10 @@
             </objects>
             <point key="canvasLocation" x="1631.8840579710147" y="879.91071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="hrF-dv-Eff">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="9TW-pc-e7c" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="9TW-pc-e7c" customClass="CartViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ch-F0-iaP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -760,7 +763,7 @@
             </objects>
             <point key="canvasLocation" x="2473.913043478261" y="879.91071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment View Controller-->
         <scene sceneID="ONb-GD-Lp8">
             <objects>
                 <viewController id="WTu-2c-8VQ" sceneMemberID="viewController">
@@ -903,10 +906,10 @@
             </objects>
             <point key="canvasLocation" x="3324.6376811594205" y="879.91071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmation View Controller-->
         <scene sceneID="oC0-D9-swS">
             <objects>
-                <viewController id="OtK-0l-yFz" sceneMemberID="viewController">
+                <viewController id="OtK-0l-yFz" customClass="ConfirmationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MUA-df-qxE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
