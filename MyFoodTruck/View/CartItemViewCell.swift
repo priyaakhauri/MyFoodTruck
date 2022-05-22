@@ -18,7 +18,7 @@ class CartItemViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
@@ -28,6 +28,12 @@ class CartItemViewCell: UITableViewCell {
         imageView?.image = UIImage(named: product.imgSrc);
         lblProductName.text = product.name;
         lblProductQty.text = String(product.qty);
-        lblPrice.text = String(Double(product.qty) * product.price);
+        lblPrice.text = "$" + String(Double(product.qty) * product.price);
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let bottomSpace: CGFloat = 20.0;
+        self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: bottomSpace, right: 0))
     }
 }

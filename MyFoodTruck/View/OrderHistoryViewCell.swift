@@ -8,7 +8,7 @@
 import UIKit
 
 class OrderHistoryViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
     var rowIndex = -1;
@@ -17,7 +17,7 @@ class OrderHistoryViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
@@ -34,20 +34,23 @@ class OrderHistoryViewCell: UITableViewCell {
         
     }
     
-    
     func setup(products: Array<Product>, rowIndex: Int,parent: Any) {
         self.rowIndex = rowIndex;
         var productsName = "";
         var totalPrice = 0.0;
+        var onlyFirstProduct = false;
         for product in products {
-            productsName += product.name + ",";
-            totalPrice += Double(product.qty) * product.price;
+            if(onlyFirstProduct == false){
+                productsName += product.name + ",...";
+                onlyFirstProduct = true
+            }
+            totalPrice +=  Double(product.qty) * product.price;
         }
         
-        lblProductName.text = productsName;
-        lblAmount.text = String(totalPrice);
+        lblProductName.text =  productsName;
+        lblAmount.text = "$" + String(totalPrice);
         
         self.parent = parent as? UIViewController;
     }
-
+    
 }

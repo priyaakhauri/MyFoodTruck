@@ -9,16 +9,10 @@ import Foundation
 import UIKit
 
 class PaymentViewController: UIViewController {
-
-
     var cartItems = Array<Product>();
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
-  
-    
 }
 
 

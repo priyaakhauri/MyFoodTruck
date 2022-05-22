@@ -9,11 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    //
-    //    @IBOutlet weak var leading: NSLayoutConstraint!
-    //    @IBOutlet weak var trailing: NSLayoutConstraint!
-    //
+
     var menuOut = false
     
     @IBOutlet weak var cartValueLabel: UILabel!
@@ -70,9 +66,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onBurgerDecrement(_ sender: Any) {
+        if(lblBurgerQty.text == "0"){
+            return
+        }
         for product in Param.products{
             if(product.id == 2){
-                
                     let qty = Int(lblBurgerQty.text!)! - 1;
                     lblBurgerQty.text = String(qty);
                     var item = product;
@@ -88,6 +86,9 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func onFChickenDecrement(_ sender: Any) {
+        if(lblFChickenQty.text == "0"){
+            return
+        }
         for product in Param.products{
             if(product.id == 6){
                 let qty = Int(lblFChickenQty.text!)! - 1;
@@ -121,10 +122,10 @@ class HomeViewController: UIViewController {
         setCartValue();
     }
     
-    
-   
-    
     @IBAction func onNachosDecrement(_ sender: Any) {
+        if(lblNachosQty.text == "0"){
+            return
+        }
         for product in Param.products{
             if(product.id == 9){
                 let qty = Int(lblNachosQty.text!)! - 1;
@@ -158,9 +159,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onMCheeseDecrement(_ sender: Any) {
+        if(lblMCheeseQty.text == "0"){
+            return
+        }
         for product in Param.products{
             if(product.id == 7){
-                
                 let qty = Int(lblMCheeseQty.text!)! - 1;
                 lblMCheeseQty.text = String(qty);
                 var item = product;
@@ -211,7 +214,6 @@ class HomeViewController: UIViewController {
     
 }
 
-
 // Table view Delegate extension
 extension HomeViewController: UITableViewDelegate{}
 
@@ -231,6 +233,7 @@ extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let screenSize: CGRect = UIScreen.main.bounds
         let cellHeight = 0.12*screenSize.height;
+        print("Menu:",cellHeight)
         return cellHeight;
     }
 }

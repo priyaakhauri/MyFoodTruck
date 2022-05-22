@@ -18,7 +18,6 @@ class UserOrderHistoryViewController: UIViewController {
     }
 }
 
-
 // Table view Delegate extension
 extension UserOrderHistoryViewController: UITableViewDelegate{}
 
@@ -33,6 +32,13 @@ extension UserOrderHistoryViewController: UITableViewDataSource{
         let cell = tvOrderHistory.dequeueReusableCell(withIdentifier: "orderHistoryViewCell", for: indexPath) as! OrderHistoryViewCell
         cell.setup(products: orderHistory[indexPath.row], rowIndex: indexPath.row, parent: self);
         return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let cellHeight = 0.10*screenSize.height;
+        print("Menu:",cellHeight)
+        return cellHeight;
     }
 }
 

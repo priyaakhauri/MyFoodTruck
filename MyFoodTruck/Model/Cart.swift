@@ -177,7 +177,5 @@ class Cart {
         }
         return Array<Product>();
     }
-    
-
 }
 

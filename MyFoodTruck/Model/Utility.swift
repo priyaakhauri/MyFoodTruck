@@ -12,21 +12,21 @@ class Utility{
     func saveUser(name:String, emailId: String, password:String)  {
         let userDefault = UserDefaults(suiteName: emailId);
         let user = User(name: name, emailId: emailId, password: password);
-            do {
-                // Create JSON Encoder
-                let encoder = JSONEncoder()
-
-                // Encode Note
-                let data = try encoder.encode(user);
-                userDefault?.set(data, forKey: emailId);
-                print("User saved");
-            } catch {
-                print("Unable to Encode Note (\(error))")
-            }
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+            
+            // Encode Note
+            let data = try encoder.encode(user);
+            userDefault?.set(data, forKey: emailId);
+            print("User saved");
+        } catch {
+            print("Unable to Encode Note (\(error))")
+        }
     }
     
-    
     func saveOrderHistory(products: Array<Product> )  {
+        print("Save Order History called")
         let emailId = getCurrentUserEmailId();
         let userDefault = UserDefaults(suiteName: emailId);
         var user = getUser(emailId: emailId);
@@ -35,9 +35,9 @@ class Utility{
         // Create JSON Encoder
         let encoder = JSONEncoder();
         do {
-        // Encode Note
-        let data = try encoder.encode(user);
-        userDefault?.set(data, forKey: emailId);
+            // Encode Note
+            let data = try encoder.encode(user);
+            userDefault?.set(data, forKey: emailId);
         } catch {
             print("Unable to Encode Note (\(error))")
         }
@@ -80,6 +80,4 @@ class Utility{
         let allOrders = getUser(emailId: getCurrentUserEmailId()).orderHistory ?? Array<Array<Product>>();
         return allOrders[index];
     }
-    
-    
 }

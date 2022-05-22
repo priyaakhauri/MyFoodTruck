@@ -8,7 +8,7 @@
 import UIKit
 
 class ProductViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var imgViewProduct: UIImageView!
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var btnDecrement: UIButton!
@@ -16,13 +16,13 @@ class ProductViewCell: UITableViewCell {
     @IBOutlet weak var lblQty: UILabel!
     
     var cartLabel: UILabel? = nil;
-
+    
     var currentProduct:Product = Product(id: 0, qty: 0);
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
@@ -37,10 +37,10 @@ class ProductViewCell: UITableViewCell {
         self.cartLabel = cartLabel;
     }
     
-    
-    
     @IBAction func onDecrementClick(_ sender: Any) {
-        
+        if(lblQty.text == "0"){
+            return
+        }
         let qty = Int(lblQty.text!)! - 1;
         self.currentProduct.qty = qty;
         lblQty.text = String(qty);
@@ -50,7 +50,6 @@ class ProductViewCell: UITableViewCell {
         }
         cartLabel!.text = String(Cart().calculateTotalAmount().totalQty);
     }
-    
     
     @IBAction func onIncrementClick(_ sender: Any) {
         let qty = Int(lblQty.text!)! + 1;
@@ -71,6 +70,12 @@ class ProductViewCell: UITableViewCell {
                 lblQty.text = String(item.qty);
             }
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let bottomSpace: CGFloat = 10.0;
+        self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 10.0, left: 0, bottom: bottomSpace, right: 0))
     }
     
 }

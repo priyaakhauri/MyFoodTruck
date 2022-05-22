@@ -8,11 +8,7 @@
 import Foundation
 import UIKit
 
-class ProductCartViewController: UIViewController {
-
-//    @IBOutlet weak var tvCart: UITableView!
-//    @IBOutlet weak var lblTotalAmount: UILabel!
-    
+class ProductCartViewController: UIViewController {    
     @IBOutlet weak var lblTotalAmount: UILabel!
     @IBOutlet weak var tvCart: UITableView!
     
@@ -24,7 +20,7 @@ class ProductCartViewController: UIViewController {
         
         let cart = Cart();
         self.cartItems = cart.getCartItems();
-        lblTotalAmount.text = String(cart.calculateTotalAmount().totalAmount);
+        lblTotalAmount.text = "$ " + String(cart.calculateTotalAmount().totalAmount);
     }
     
     @IBAction func onCheckoutClick(_ sender: Any) {
@@ -49,6 +45,13 @@ extension ProductCartViewController: UITableViewDataSource{
         let cell = tvCart.dequeueReusableCell(withIdentifier: "cartItemViewCell", for: indexPath) as! CartItemViewCell
         cell.setup(product: cartItems[indexPath.row]);
         return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let cellHeight = 0.12*screenSize.height;
+        print("Cart :",cellHeight)
+        return cellHeight;
     }
 }
 
