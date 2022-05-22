@@ -792,6 +792,7 @@
                     <connections>
                         <outlet property="cartValueLabel" destination="3IP-9q-FkZ" id="C5d-zt-6c8"/>
                         <outlet property="lblBurgerQty" destination="uon-zS-nad" id="E1s-zw-wLO"/>
+                        <outlet property="lblCartQty" destination="3IP-9q-FkZ" id="JJ1-WR-CGH"/>
                         <outlet property="lblFChickenQty" destination="RMv-mh-8mv" id="fj5-oo-wV4"/>
                         <outlet property="lblMCheeseQty" destination="Ndx-j3-QBG" id="Npr-KZ-56c"/>
                         <outlet property="lblNachosQty" destination="0IL-Hk-0gs" id="WNQ-gP-Xy4"/>

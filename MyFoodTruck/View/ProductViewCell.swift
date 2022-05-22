@@ -37,12 +37,13 @@ class ProductViewCell: UITableViewCell {
     
     
     @IBAction func onDecrementClick(_ sender: Any) {
+        if(Int(lblQty.text!) != 0){
         let qty = Int(lblQty.text!)! - 1;
         self.currentProduct.qty = qty;
         lblQty.text = String(qty);
         
         // if qty == 0 then remove item from cart
-        if(qty == 0){
+        }else{
             Cart().removeProduct(product: self.currentProduct);
         }
     }
