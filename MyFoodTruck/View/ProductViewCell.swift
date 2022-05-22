@@ -26,22 +26,24 @@ class ProductViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(product: Product){
+    func setup(product: Product, cartItem: Array<Product>){
         imgViewProduct.image = UIImage(named: product.imgSrc);
         lblProductName.text = product.name;
         lblQty.text = String(product.qty);
         self.currentProduct = product;
+        setQty(product:currentProduct,cartItems: cartItem);
     }
     
     
     
     @IBAction func onDecrementClick(_ sender: Any) {
+        if(Int(lblQty.text!) != 0){
         let qty = Int(lblQty.text!)! - 1;
         self.currentProduct.qty = qty;
         lblQty.text = String(qty);
         
         // if qty == 0 then remove item from cart
-        if(qty == 0){
+        }else{
             Cart().removeProduct(product: self.currentProduct);
         }
     }
@@ -55,6 +57,15 @@ class ProductViewCell: UITableViewCell {
         // If qty > 0 then add to cart
         if(qty > 0){
             Cart().addToCart(product: self.currentProduct);
+        }
+    }
+    
+    func setQty(product: Product, cartItems: Array<Product>){
+        
+        for item in cartItems {
+            if(product.id == item.id){
+                lblQty.text = String(item.qty);
+            }
         }
     }
     

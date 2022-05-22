@@ -475,6 +475,9 @@
                                                                 <rect key="frame" x="109.5" y="0.0" width="30" height="22"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="4"/>
                                                                 <state key="normal" image="minus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onBurgerDecrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="N8v-2c-Z2L"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uon-zS-nad">
                                                                 <rect key="frame" x="139.5" y="0.0" width="30" height="22"/>
@@ -485,6 +488,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWC-ep-TVA">
                                                                 <rect key="frame" x="169.5" y="0.0" width="30" height="22"/>
                                                                 <state key="normal" image="plus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onBugerIncrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="yXq-CE-SeO"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -514,6 +520,9 @@
                                                                 <rect key="frame" x="109.5" y="0.0" width="30" height="22"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="4"/>
                                                                 <state key="normal" image="minus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onFChickenDecrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="4eL-0b-NXc"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-mh-8mv">
                                                                 <rect key="frame" x="139.5" y="0.0" width="30" height="22"/>
@@ -524,6 +533,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hK-FR-oZT">
                                                                 <rect key="frame" x="169.5" y="0.0" width="30" height="22"/>
                                                                 <state key="normal" image="plus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onFchickenIncrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="NYA-Am-hBk"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -558,6 +570,9 @@
                                                                 <rect key="frame" x="111" y="0.0" width="30.5" height="22"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="4"/>
                                                                 <state key="normal" image="minus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onMCheeseDecrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="6Er-aW-ngO"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-j3-QBG">
                                                                 <rect key="frame" x="141.5" y="0.0" width="30" height="22"/>
@@ -568,6 +583,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LR9-eZ-Laf">
                                                                 <rect key="frame" x="171.5" y="0.0" width="30.5" height="22"/>
                                                                 <state key="normal" image="plus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onMCheeseIncrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="PFc-ej-kJK"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -597,6 +615,9 @@
                                                                 <rect key="frame" x="111" y="0.0" width="30.5" height="22"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="4"/>
                                                                 <state key="normal" image="minus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onNachosDecrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="gM1-9J-srL"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IL-Hk-0gs">
                                                                 <rect key="frame" x="141.5" y="0.0" width="30" height="22"/>
@@ -607,6 +628,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPH-rZ-W5N">
                                                                 <rect key="frame" x="171.5" y="0.0" width="30.5" height="22"/>
                                                                 <state key="normal" image="plus" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="onNachosIncrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="m04-Nr-F3a"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -767,6 +791,11 @@
                     <navigationItem key="navigationItem" id="S0w-9G-oSI"/>
                     <connections>
                         <outlet property="cartValueLabel" destination="3IP-9q-FkZ" id="C5d-zt-6c8"/>
+                        <outlet property="lblBurgerQty" destination="uon-zS-nad" id="E1s-zw-wLO"/>
+                        <outlet property="lblCartQty" destination="3IP-9q-FkZ" id="JJ1-WR-CGH"/>
+                        <outlet property="lblFChickenQty" destination="RMv-mh-8mv" id="fj5-oo-wV4"/>
+                        <outlet property="lblMCheeseQty" destination="Ndx-j3-QBG" id="Npr-KZ-56c"/>
+                        <outlet property="lblNachosQty" destination="0IL-Hk-0gs" id="WNQ-gP-Xy4"/>
                         <outlet property="tvMenu" destination="F8C-88-TsF" id="EQ2-mH-0QG"/>
                     </connections>
                 </viewController>
