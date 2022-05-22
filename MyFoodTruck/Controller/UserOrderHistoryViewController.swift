@@ -31,7 +31,7 @@ extension UserOrderHistoryViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         // assigning data to cells
         let cell = tvOrderHistory.dequeueReusableCell(withIdentifier: "orderHistoryViewCell", for: indexPath) as! OrderHistoryViewCell
-        cell.setup(products: orderHistory[indexPath.row], rowIndex: indexPath.row);
+        cell.setup(products: orderHistory[indexPath.row], rowIndex: indexPath.row, parent: self);
         return cell;
     }
 }

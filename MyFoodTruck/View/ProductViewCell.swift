@@ -14,6 +14,8 @@ class ProductViewCell: UITableViewCell {
     @IBOutlet weak var btnDecrement: UIButton!
     @IBOutlet weak var btnIncrement: UIButton!
     @IBOutlet weak var lblQty: UILabel!
+    
+    var cartLabel: UILabel? = nil;
 
     var currentProduct:Product = Product(id: 0, qty: 0);
     override func awakeFromNib() {
@@ -26,26 +28,27 @@ class ProductViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(product: Product, cartItem: Array<Product>){
+    func setup(product: Product, cartItem: Array<Product>, cartLabel: UILabel){
         imgViewProduct.image = UIImage(named: product.imgSrc);
         lblProductName.text = product.name;
         lblQty.text = String(product.qty);
         self.currentProduct = product;
         setQty(product:currentProduct,cartItems: cartItem);
+        self.cartLabel = cartLabel;
     }
     
     
     
     @IBAction func onDecrementClick(_ sender: Any) {
-        if(Int(lblQty.text!) != 0){
+        
         let qty = Int(lblQty.text!)! - 1;
         self.currentProduct.qty = qty;
         lblQty.text = String(qty);
-        
-        // if qty == 0 then remove item from cart
-        }else{
+        Cart().addToCart(product: self.currentProduct);
+        if(Int(lblQty.text!) == 0){
             Cart().removeProduct(product: self.currentProduct);
         }
+        cartLabel!.text = String(Cart().calculateTotalAmount().totalQty);
     }
     
     
@@ -58,6 +61,7 @@ class ProductViewCell: UITableViewCell {
         if(qty > 0){
             Cart().addToCart(product: self.currentProduct);
         }
+        cartLabel!.text = String(Cart().calculateTotalAmount().totalQty);
     }
     
     func setQty(product: Product, cartItems: Array<Product>){

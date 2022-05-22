@@ -12,6 +12,7 @@ class OrderHistoryViewCell: UITableViewCell {
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
     var rowIndex = -1;
+    var parent: UIViewController? = nil;
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,7 +20,6 @@ class OrderHistoryViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        print(selected);
         // Configure the view for the selected state
     }
     
@@ -30,12 +30,12 @@ class OrderHistoryViewCell: UITableViewCell {
         // navigate to the cart
         let story = UIStoryboard(name: "Main", bundle: nil);
         let cartViewController = story.instantiateViewController(identifier: "productCartViewController") as! ProductCartViewController;
-//        self.present(cartViewController, animated: true, completion: nil);
+        self.parent!.present(cartViewController, animated: true, completion: nil);
         
     }
     
     
-    func setup(products: Array<Product>, rowIndex: Int) {
+    func setup(products: Array<Product>, rowIndex: Int,parent: Any) {
         self.rowIndex = rowIndex;
         var productsName = "";
         var totalPrice = 0.0;
@@ -46,6 +46,8 @@ class OrderHistoryViewCell: UITableViewCell {
         
         lblProductName.text = productsName;
         lblAmount.text = String(totalPrice);
+        
+        self.parent = parent as? UIViewController;
     }
 
 }

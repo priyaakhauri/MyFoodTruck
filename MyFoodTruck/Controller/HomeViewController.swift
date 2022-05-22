@@ -72,13 +72,13 @@ class HomeViewController: UIViewController {
     @IBAction func onBurgerDecrement(_ sender: Any) {
         for product in Param.products{
             if(product.id == 2){
-                if(Int(lblBurgerQty.text!) != 0){
+                
                     let qty = Int(lblBurgerQty.text!)! - 1;
                     lblBurgerQty.text = String(qty);
                     var item = product;
                     item.qty = qty;
                     cart.addToCart(product: item);
-                }else{
+                if(Int(lblBurgerQty.text!) == 0){
                     cart.removeProduct(product: product);
                 }
             }
@@ -90,17 +90,16 @@ class HomeViewController: UIViewController {
     @IBAction func onFChickenDecrement(_ sender: Any) {
         for product in Param.products{
             if(product.id == 6){
-                if(Int(lblFChickenQty.text!) != 0){
                 let qty = Int(lblFChickenQty.text!)! - 1;
                 lblFChickenQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
                 cart.addToCart(product: item);
                 // If qty > 0 then add to cart
-                }else{
+                if(Int(lblFChickenQty.text!) == 0){
                     cart.removeProduct(product: product);
                 }
-            }
+            }            
         }
         setCartValue();
     }
@@ -128,14 +127,13 @@ class HomeViewController: UIViewController {
     @IBAction func onNachosDecrement(_ sender: Any) {
         for product in Param.products{
             if(product.id == 9){
-                if(Int(lblNachosQty.text!) != 0){
                 let qty = Int(lblNachosQty.text!)! - 1;
                 lblNachosQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
                 cart.addToCart(product: item);
                 // If qty > 0 then add to cart
-                }else{
+                if(Int(lblNachosQty.text!) == 0){
                     cart.removeProduct(product: product);
                 }
             }
@@ -162,14 +160,14 @@ class HomeViewController: UIViewController {
     @IBAction func onMCheeseDecrement(_ sender: Any) {
         for product in Param.products{
             if(product.id == 7){
-                if(Int(lblMCheeseQty.text!) != 0){
+                
                 let qty = Int(lblMCheeseQty.text!)! - 1;
                 lblMCheeseQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
                 // If qty > 0 then add to cart
                 cart.addToCart(product: item);
-                }else{
+                if(Int(lblMCheeseQty.text!) == 0){
                     cart.removeProduct(product: product);
                 }
             }
@@ -226,7 +224,7 @@ extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         // assigning data to cells
         let cell = tvMenu.dequeueReusableCell(withIdentifier: "productViewCell", for: indexPath) as! ProductViewCell
-        cell.setup(product: Param.products[indexPath.row], cartItem: self.cartItems);
+        cell.setup(product: Param.products[indexPath.row], cartItem: self.cartItems, cartLabel: lblCartQty);
         return cell;
     }
     
