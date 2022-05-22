@@ -25,6 +25,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     if(user.emailId == txtEmailId.text && user.password == txtPassword.text){
                         // Navigate to menu
                         print("Authenticated");
+                        Cart().clearCart();
+                        // save current user email id
+                        Utility().setCurrentUser(emailId: user.emailId);
+                        
                         let story = UIStoryboard(name: "Main", bundle: nil);
                         let homeViewController = story.instantiateViewController(identifier: "homeViewController") as! HomeViewController;
                         self.present(homeViewController, animated: true, completion: nil);

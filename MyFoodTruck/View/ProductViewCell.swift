@@ -26,11 +26,12 @@ class ProductViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(product: Product){
+    func setup(product: Product, cartItem: Array<Product>){
         imgViewProduct.image = UIImage(named: product.imgSrc);
         lblProductName.text = product.name;
         lblQty.text = String(product.qty);
         self.currentProduct = product;
+        setQty(product:currentProduct,cartItems: cartItem);
     }
     
     
@@ -55,6 +56,15 @@ class ProductViewCell: UITableViewCell {
         // If qty > 0 then add to cart
         if(qty > 0){
             Cart().addToCart(product: self.currentProduct);
+        }
+    }
+    
+    func setQty(product: Product, cartItems: Array<Product>){
+        
+        for item in cartItems {
+            if(product.id == item.id){
+                lblQty.text = String(item.qty);
+            }
         }
     }
     
