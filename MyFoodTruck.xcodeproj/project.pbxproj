@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		298FDCCE2839C70000182B4F /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FDCCA2839C70000182B4F /* OrderConfirmationViewController.swift */; };
+		298FDCCF2839C70000182B4F /* UserOrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FDCCB2839C70000182B4F /* UserOrderHistoryViewController.swift */; };
+		298FDCD02839C70000182B4F /* ProductCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FDCCC2839C70000182B4F /* ProductCartViewController.swift */; };
+		298FDCD12839C70000182B4F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FDCCD2839C70000182B4F /* PaymentViewController.swift */; };
+		298FDCD52839C7BE00182B4F /* OrderHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FDCD32839C7BE00182B4F /* OrderHistoryViewCell.swift */; };
+		298FDCD62839C7BE00182B4F /* CartItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FDCD42839C7BE00182B4F /* CartItemViewCell.swift */; };
 		29AB78D428386ADA00FBAD65 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB78D328386ADA00FBAD65 /* HomeViewController.swift */; };
 		29AB78D82838777300FBAD65 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB78D72838777300FBAD65 /* ProductViewCell.swift */; };
 		29ACA24228385F4600BDD775 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACA24128385F4600BDD775 /* Utility.swift */; };
@@ -26,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		298FDCCA2839C70000182B4F /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		298FDCCB2839C70000182B4F /* UserOrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrderHistoryViewController.swift; sourceTree = "<group>"; };
+		298FDCCC2839C70000182B4F /* ProductCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCartViewController.swift; sourceTree = "<group>"; };
+		298FDCCD2839C70000182B4F /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		298FDCD32839C7BE00182B4F /* OrderHistoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewCell.swift; sourceTree = "<group>"; };
+		298FDCD42839C7BE00182B4F /* CartItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemViewCell.swift; sourceTree = "<group>"; };
 		29AB78D328386ADA00FBAD65 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		29AB78D72838777300FBAD65 /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 		29ACA24128385F4600BDD775 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -90,6 +102,10 @@
 		793ECC13282AA71F00FD7174 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				298FDCCA2839C70000182B4F /* OrderConfirmationViewController.swift */,
+				298FDCCD2839C70000182B4F /* PaymentViewController.swift */,
+				298FDCCC2839C70000182B4F /* ProductCartViewController.swift */,
+				298FDCCB2839C70000182B4F /* UserOrderHistoryViewController.swift */,
 				793ECBFF282AA70900FD7174 /* ViewController.swift */,
 				29ACA24428385F6A00BDD775 /* RegisterViewController.swift */,
 				29AB78D328386ADA00FBAD65 /* HomeViewController.swift */,
@@ -114,6 +130,8 @@
 		793ECC1A282AA76000FD7174 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				298FDCD42839C7BE00182B4F /* CartItemViewCell.swift */,
+				298FDCD32839C7BE00182B4F /* OrderHistoryViewCell.swift */,
 				793ECC01282AA70900FD7174 /* Main.storyboard */,
 				793ECC09282AA71000FD7174 /* LaunchScreen.storyboard */,
 				29AB78D72838777300FBAD65 /* ProductViewCell.swift */,
@@ -194,7 +212,13 @@
 				793ECC00282AA70900FD7174 /* ViewController.swift in Sources */,
 				793ECC16282AA75000FD7174 /* Param.swift in Sources */,
 				29ACA24528385F6A00BDD775 /* RegisterViewController.swift in Sources */,
+				298FDCCF2839C70000182B4F /* UserOrderHistoryViewController.swift in Sources */,
+				298FDCD02839C70000182B4F /* ProductCartViewController.swift in Sources */,
 				29ACA24228385F4600BDD775 /* Utility.swift in Sources */,
+				298FDCD62839C7BE00182B4F /* CartItemViewCell.swift in Sources */,
+				298FDCD52839C7BE00182B4F /* OrderHistoryViewCell.swift in Sources */,
+				298FDCCE2839C70000182B4F /* OrderConfirmationViewController.swift in Sources */,
+				298FDCD12839C70000182B4F /* PaymentViewController.swift in Sources */,
 				793ECBFC282AA70900FD7174 /* AppDelegate.swift in Sources */,
 				29ACA24B28385FF300BDD775 /* User.swift in Sources */,
 				793ECBFE282AA70900FD7174 /* SceneDelegate.swift in Sources */,

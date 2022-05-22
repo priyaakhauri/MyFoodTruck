@@ -10,5 +10,6 @@ import Foundation
 struct User: Codable{
     var name: String = "";
     var emailId: String = "";
-    var password: String = "";    
+    var password: String = "";
+    var orderHistory: Array<Array<Product>>? = Array<Array<Product>>();
 }
