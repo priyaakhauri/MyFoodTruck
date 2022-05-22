@@ -24,9 +24,11 @@ class ProductCartViewController: UIViewController {
     }
     
     @IBAction func onCheckoutClick(_ sender: Any) {
-                let story = UIStoryboard(name: "Main", bundle: nil);
-                let paymentViewController = story.instantiateViewController(identifier: "paymentViewController") as! PaymentViewController;
-                self.present(paymentViewController, animated: true, completion: nil);
+        if(cartItems.count > 0){
+            let story = UIStoryboard(name: "Main", bundle: nil);
+            let paymentViewController = story.instantiateViewController(identifier: "paymentViewController") as! PaymentViewController;
+            self.present(paymentViewController, animated: true, completion: nil);
+        }
     }
 }
 

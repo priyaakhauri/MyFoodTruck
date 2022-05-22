@@ -38,12 +38,8 @@ class OrderHistoryViewCell: UITableViewCell {
         self.rowIndex = rowIndex;
         var productsName = "";
         var totalPrice = 0.0;
-        var onlyFirstProduct = false;
         for product in products {
-            if(onlyFirstProduct == false){
-                productsName += product.name + ",...";
-                onlyFirstProduct = true
-            }
+            productsName += product.name + ", ";
             totalPrice +=  Double(product.qty) * product.price;
         }
         
