@@ -106,7 +106,7 @@ class Cart {
                 if(products.count>0){
                     for item in products {
                         total.totalQty += item.qty;
-                        total.totalAmount += item.price;
+                        total.totalAmount += item.price * Double(item.qty);
                     }
                 }
             } catch {
@@ -128,5 +128,31 @@ class Cart {
             print("Unable to Encode (\(error))")
         }
     }
+    
+    func getCartItems() -> Array<Product> {
+        var products = Array<Product>();
+        // Get Existing items in the list
+        let cartSuite = UserDefaults(suiteName: "cart");
+        if let data = cartSuite?.object(forKey: "cartItems"){
+            do {
+                print("Found suite");
+                // Create JSON Decoder
+                let decoder = JSONDecoder();
+                // Decode
+                products = try decoder.decode(Array<Product>.self, from: data as! Data)
+                // If list isnt empty search for added item
+                // else add in the list
+                if(products.count>0){
+                    return products;
+                }else{
+                    return Array<Product>();
+                }
+            } catch {
+                print("Unable to Decode Note (\(error))")
+            }
+        }
+        return Array<Product>();
+    }
+
 }
 

@@ -18,12 +18,23 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var cartValueLabel: UILabel!
     @IBOutlet weak var tvMenu: UITableView!
-    
+    let story = UIStoryboard(name: "Main", bundle: nil);
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tvMenu.delegate = self;
         tvMenu.dataSource = self;
     
+    }
+    @IBAction func onOrderHistoryClick(_ sender: Any) {
+        let userOrderHistoryViewController = story.instantiateViewController(identifier: "userOrderHistoryViewController") as! UserOrderHistoryViewController;
+        self.present(userOrderHistoryViewController, animated: true, completion: nil);
+
+    }
+    
+    @IBAction func onCartClick(_ sender: Any) {
+        let cartViewController = story.instantiateViewController(identifier: "productCartViewController") as! ProductCartViewController;
+        self.present(cartViewController, animated: true, completion: nil);
     }
 }
 

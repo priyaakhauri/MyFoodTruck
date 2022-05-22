@@ -25,6 +25,36 @@ class Utility{
             }
     }
     
+    
+    func saveOrderHistory(products: Array<Product> )  {
+        let emailId = getCurrentUserEmailId();
+        let userDefault = UserDefaults(suiteName: emailId);
+        var user = getUser(emailId: emailId);
+        user.orderHistory!.append(products);
+        
+        // Create JSON Encoder
+        let encoder = JSONEncoder();
+        do {
+        // Encode Note
+        let data = try encoder.encode(user);
+        userDefault?.set(data, forKey: emailId);
+        } catch {
+            print("Unable to Encode Note (\(error))")
+        }
+    }
+    
+    func setCurrentUser(emailId: String){
+        let userDefault = UserDefaults.standard;
+        userDefault.setValue(emailId, forKey: "currentUserEmailId");
+    }
+    
+    func getCurrentUserEmailId() -> String {
+        let userDefault = UserDefaults.standard;
+        return userDefault.value(forKey: "currentUserEmailId") as! String;
+    }
+    
+    
+    
     func getUser(emailId: String) -> User{
         let userDefault = UserDefaults(suiteName: emailId);
         var user = User();
@@ -37,7 +67,12 @@ class Utility{
             } catch {
                 print("Unable to Decode Note (\(error))")
             }
-        }        
+        }
         return user;
+    }
+    
+    
+    func getOrderHistory() -> Array<Array<Product>> {
+        return getUser(emailId: getCurrentUserEmailId()).orderHistory ?? Array<Array<Product>>();
     }
 }
