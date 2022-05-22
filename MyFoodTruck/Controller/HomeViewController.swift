@@ -37,17 +37,16 @@ class HomeViewController: UIViewController {
         
         setQty();
     }
+    
     @IBAction func onOrderHistoryClick(_ sender: Any) {
         let userOrderHistoryViewController = story.instantiateViewController(identifier: "userOrderHistoryViewController") as! UserOrderHistoryViewController;
         self.present(userOrderHistoryViewController, animated: true, completion: nil);
-        
     }
     
     @IBAction func onCartClick(_ sender: Any) {
         let cartViewController = story.instantiateViewController(identifier: "productCartViewController") as! ProductCartViewController;
         self.present(cartViewController, animated: true, completion: nil);
     }
-    
     
     @IBAction func onBugerIncrement(_ sender: Any) {
         for product in Param.products{
