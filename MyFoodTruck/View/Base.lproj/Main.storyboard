@@ -722,17 +722,17 @@
                                         <color key="textColor" red="0.20784313730000001" green="0.46274509800000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-DR-AX4">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-DR-AX4">
                                         <rect key="frame" x="331.5" y="0.0" width="42.5" height="45"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IP-9q-FkZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="3IP-9q-FkZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="0.20784313730000001" green="0.46274509800000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Un-if-vm8">
-                                                <rect key="frame" x="0.0" y="15" width="42.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="42.5" height="22.5"/>
                                                 <state key="normal" image="cart"/>
                                                 <connections>
                                                     <action selector="onCartClick:" destination="wJN-AG-VbW" eventType="touchUpInside" id="5uY-5f-wrJ"/>
@@ -1432,7 +1432,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L96-bY-fqw" userLabel="View4">
-                                <rect key="frame" x="0.0" y="850.5" width="414" height="44.5"/>
+                                <rect key="frame" x="0.0" y="851" width="414" height="45"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.46274509800000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1467,9 +1467,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="L96-bY-fqw" firstAttribute="leading" secondItem="4cY-rJ-yEd" secondAttribute="leading" id="3pv-ih-376"/>
+                            <constraint firstItem="L96-bY-fqw" firstAttribute="bottom" secondItem="nB7-gS-7tt" secondAttribute="bottom" id="4Xb-Nc-ker"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nAP-Vc-ctj" secondAttribute="trailing" id="GRn-U8-xmR"/>
                             <constraint firstItem="nAP-Vc-ctj" firstAttribute="leading" secondItem="nB7-gS-7tt" secondAttribute="leadingMargin" id="LEm-tD-Dr5"/>
-                            <constraint firstItem="L96-bY-fqw" firstAttribute="top" secondItem="pb1-aS-oTu" secondAttribute="bottom" id="OkS-Fy-CCx"/>
                             <constraint firstItem="pb1-aS-oTu" firstAttribute="height" secondItem="nB7-gS-7tt" secondAttribute="height" multiplier="0.05" id="QwS-xJ-tyo"/>
                             <constraint firstItem="L96-bY-fqw" firstAttribute="height" secondItem="nB7-gS-7tt" secondAttribute="height" multiplier="0.05" id="QzD-6z-Y7R"/>
                             <constraint firstItem="ddL-B8-GUR" firstAttribute="leading" secondItem="nB7-gS-7tt" secondAttribute="leadingMargin" id="S8a-WQ-6Ki"/>
@@ -1501,7 +1501,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5jk-Hd-hr5"/>
-        <segue reference="gY2-m6-VdQ"/>
+        <segue reference="9Sv-pf-HAU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Burger" width="258" height="258"/>
