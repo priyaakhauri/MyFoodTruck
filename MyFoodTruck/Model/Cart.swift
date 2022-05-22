@@ -52,6 +52,30 @@ class Cart {
         }
     }
     
+    func addToCart(productArr: Array<Product>){
+        var products = Array<Product>();
+        // Get Existing items in the list
+        let cartSuite = UserDefaults(suiteName: "cart");
+        if let data = cartSuite?.object(forKey: "cartItems"){
+            do {
+                // Create JSON Decoder
+                let decoder = JSONDecoder();
+                // Decode
+                products = try decoder.decode(Array<Product>.self, from: data as! Data)
+                // If list isnt empty search for added item
+                // else add in the list
+                products = productArr;
+                updateInUserDefault(products: products);
+                
+            } catch {
+                print("Unable to Decode Note (\(error))")
+            }
+        }else{
+            products = productArr;
+            updateInUserDefault(products: products);
+        }
+    }
+    
     func clearCart(){
         updateInUserDefault(products: Array<Product>());
         
@@ -153,6 +177,7 @@ class Cart {
         }
         return Array<Product>();
     }
+    
 
 }
 

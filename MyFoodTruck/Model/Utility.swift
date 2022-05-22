@@ -75,4 +75,11 @@ class Utility{
     func getOrderHistory() -> Array<Array<Product>> {
         return getUser(emailId: getCurrentUserEmailId()).orderHistory ?? Array<Array<Product>>();
     }
+    
+    func getOrderHistoryByIndex(index: Int) -> Array<Product> {
+        let allOrders = getUser(emailId: getCurrentUserEmailId()).orderHistory ?? Array<Array<Product>>();
+        return allOrders[index];
+    }
+    
+    
 }
