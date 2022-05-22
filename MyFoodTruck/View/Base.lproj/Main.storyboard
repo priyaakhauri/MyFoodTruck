@@ -255,6 +255,10 @@
                                                 <state key="normal" title="Sign in">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onSignInclick:" destination="Evs-jI-m04" eventType="touchUpInside" id="yuZ-y0-9yA"/>
+                                                    <action selector="onSignUpClick:" destination="Evs-jI-m04" eventType="touchUpInside" id="HJX-en-vwy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -571,7 +575,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="4"/>
                                                                 <state key="normal" image="minus" catalog="system"/>
                                                                 <connections>
-                                                                    <action selector="onMCheeseDecrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="6Er-aW-ngO"/>
+                                                                    <action selector="onMCheeseDecrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="gJ7-cK-D9Q"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-j3-QBG">
@@ -584,7 +588,7 @@
                                                                 <rect key="frame" x="171.5" y="0.0" width="30.5" height="22"/>
                                                                 <state key="normal" image="plus" catalog="system"/>
                                                                 <connections>
-                                                                    <action selector="onMCheeseIncrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="PFc-ej-kJK"/>
+                                                                    <action selector="onMCheeseIncrement:" destination="wJN-AG-VbW" eventType="touchUpInside" id="b26-Lw-Ap9"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -794,7 +798,7 @@
                         <outlet property="lblBurgerQty" destination="uon-zS-nad" id="E1s-zw-wLO"/>
                         <outlet property="lblCartQty" destination="3IP-9q-FkZ" id="JJ1-WR-CGH"/>
                         <outlet property="lblFChickenQty" destination="RMv-mh-8mv" id="fj5-oo-wV4"/>
-                        <outlet property="lblMCheeseQty" destination="Ndx-j3-QBG" id="Npr-KZ-56c"/>
+                        <outlet property="lblMCheeseQty" destination="Ndx-j3-QBG" id="Yas-Ay-aKP"/>
                         <outlet property="lblNachosQty" destination="0IL-Hk-0gs" id="WNQ-gP-Xy4"/>
                         <outlet property="tvMenu" destination="F8C-88-TsF" id="EQ2-mH-0QG"/>
                     </connections>
@@ -995,10 +999,10 @@
             </objects>
             <point key="canvasLocation" x="2473.913043478261" y="879.91071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment View Controller-->
         <scene sceneID="ONb-GD-Lp8">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="WTu-2c-8VQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="paymentViewController" modalPresentationStyle="fullScreen" id="WTu-2c-8VQ" customClass="PaymentViewController" customModule="MyFoodTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0he-zw-VY7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1165,10 +1169,10 @@
             </objects>
             <point key="canvasLocation" x="3324.6376811594205" y="879.91071428571422"/>
         </scene>
-        <!--Confirmation View Controller-->
+        <!--Order Confirmation View Controller-->
         <scene sceneID="oC0-D9-swS">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="OtK-0l-yFz" customClass="ConfirmationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="orderConfirmationViewController" modalPresentationStyle="fullScreen" id="OtK-0l-yFz" customClass="OrderConfirmationViewController" customModule="MyFoodTruck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MUA-df-qxE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1256,6 +1260,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="yPf-B2-zJ8"/>
         <segue reference="5jk-Hd-hr5"/>
     </inferredMetricsTieBreakers>
     <resources>

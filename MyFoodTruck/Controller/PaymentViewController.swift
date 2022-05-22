@@ -16,12 +16,7 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    @IBAction func onProceedClick(_ sender: Any) {
-        // Add order in the history   
-        let story = UIStoryboard(name: "Main", bundle: nil);
-             let orderConfirmationViewController = story.instantiateViewController(identifier: "orderConfirmationViewController") as! OrderConfirmationViewController;
-             self.present(orderConfirmationViewController, animated: true, completion: nil);
-    }
+
   
     
 }

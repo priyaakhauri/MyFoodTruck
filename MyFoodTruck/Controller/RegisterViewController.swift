@@ -43,6 +43,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
         }
         
     }
+    @IBAction func onSignInclick(_ sender: Any) {
+        let story = UIStoryboard(name: "Main", bundle: nil);
+        let mainViewController = story.instantiateViewController(identifier: "mainViewController") as! ViewController;
+        self.present(mainViewController, animated: true, completion: nil);
+    }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         txtName.resignFirstResponder();

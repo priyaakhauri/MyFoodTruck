@@ -21,12 +21,12 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var lblBurgerQty: UILabel!
     
-    @IBOutlet weak var lblMCheeseQty: UILabel!
     @IBOutlet weak var lblFChickenQty: UILabel!
     @IBOutlet weak var lblNachosQty: UILabel!
     
     @IBOutlet weak var lblCartQty: UILabel!
     
+    @IBOutlet weak var lblMCheeseQty: UILabel!
     
     let story = UIStoryboard(name: "Main", bundle: nil);
     let utility = Utility();
@@ -60,15 +60,13 @@ class HomeViewController: UIViewController {
                 lblBurgerQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
-                setCartValue();
                 // If qty > 0 then add to cart
                 if(qty > 0){
                     cart.addToCart(product: item);
-                    setCartValue();
-                    return;
                 }
             }
         }
+        setCartValue();
     }
     
     @IBAction func onBurgerDecrement(_ sender: Any) {
@@ -79,13 +77,13 @@ class HomeViewController: UIViewController {
                     lblBurgerQty.text = String(qty);
                     var item = product;
                     item.qty = qty;
-                    setCartValue();
+                    cart.addToCart(product: item);
                 }else{
-                        cart.removeProduct(product: product);
-                        setCartValue();
+                    cart.removeProduct(product: product);
                 }
             }
         }
+        setCartValue();
     }
     
     
@@ -97,14 +95,14 @@ class HomeViewController: UIViewController {
                 lblFChickenQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
-                setCartValue();
+                cart.addToCart(product: item);
                 // If qty > 0 then add to cart
                 }else{
                     cart.removeProduct(product: product);
-                    setCartValue();
                 }
             }
         }
+        setCartValue();
     }
     
     @IBAction func onFchickenIncrement(_ sender: Any) {
@@ -114,53 +112,18 @@ class HomeViewController: UIViewController {
                 lblFChickenQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
-                setCartValue();
+                
                 // If qty > 0 then add to cart
                 if(qty > 0){
                     cart.addToCart(product: item);
-                    setCartValue();
-                    return;
                 }
             }
         }
+        setCartValue();
     }
     
     
-    @IBAction func onMCheeseDecrement(_ sender: Any) {
-        for product in Param.products{
-            if(product.id == 6){
-                if(Int(lblMCheeseQty.text!) != 0){
-                let qty = Int(lblMCheeseQty.text!)! - 1;
-                lblMCheeseQty.text = String(qty);
-                var item = product;
-                item.qty = qty;
-                setCartValue();
-                // If qty > 0 then add to cart
-                }else{
-                    cart.removeProduct(product: product);
-                    setCartValue();
-                }
-            }
-        }
-    }
-    
-    @IBAction func onMCheeseIncrement(_ sender: Any) {
-        for product in Param.products{
-            if(product.id == 7){
-                if(Int(lblMCheeseQty.text!) != 0){
-                let qty = Int(lblMCheeseQty.text!)! + 1;
-                lblMCheeseQty.text = String(qty);
-                var item = product;
-                item.qty = qty;
-                setCartValue();
-                // If qty > 0 then add to cart
-                }else{
-                    cart.addToCart(product: product);
-                    setCartValue();
-                }
-            }
-        }
-    }
+   
     
     @IBAction func onNachosDecrement(_ sender: Any) {
         for product in Param.products{
@@ -170,14 +133,14 @@ class HomeViewController: UIViewController {
                 lblNachosQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
-                setCartValue();
+                cart.addToCart(product: item);
                 // If qty > 0 then add to cart
                 }else{
                     cart.removeProduct(product: product);
-                    setCartValue();
                 }
             }
         }
+        setCartValue();
     }
     
     @IBAction func onNachosIncrement(_ sender: Any) {
@@ -187,17 +150,48 @@ class HomeViewController: UIViewController {
                 lblNachosQty.text = String(qty);
                 var item = product;
                 item.qty = qty;
-                setCartValue();
                 // If qty > 0 then add to cart
                 if(qty > 0){
                     cart.addToCart(product: item);
-                    setCartValue();
-                    return;
                 }
             }
         }
+        setCartValue();
     }
     
+    @IBAction func onMCheeseDecrement(_ sender: Any) {
+        for product in Param.products{
+            if(product.id == 7){
+                if(Int(lblMCheeseQty.text!) != 0){
+                let qty = Int(lblMCheeseQty.text!)! - 1;
+                lblMCheeseQty.text = String(qty);
+                var item = product;
+                item.qty = qty;
+                // If qty > 0 then add to cart
+                cart.addToCart(product: item);
+                }else{
+                    cart.removeProduct(product: product);
+                }
+            }
+        }
+        setCartValue();
+    }
+    
+    @IBAction func onMCheeseIncrement(_ sender: Any) {
+        for product in Param.products{
+            if(product.id == 7){
+                let qty = Int(lblMCheeseQty.text!)! + 1;
+                lblMCheeseQty.text = String(qty);
+                var item = product;
+                item.qty = qty;
+                // If qty > 0 then add to cart
+                if(qty > 0){
+                    cart.addToCart(product: item);
+                }
+            }
+        }
+        setCartValue();
+    }
     
     func setQty(){
         for item in self.cartItems {

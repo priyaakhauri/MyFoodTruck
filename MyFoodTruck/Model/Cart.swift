@@ -29,7 +29,7 @@ class Cart {
                     let index = searchProduct(product: product, products: products);
                     if(index != -1){
                         print("Found product");
-                        products[index].qty+=1;
+                        products[index].qty = product.qty;
                         print(products[index]);
                     }else{
                         print("Adding new product");
